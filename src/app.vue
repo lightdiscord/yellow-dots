@@ -49,27 +49,25 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue';
+import {Component, Vue} from "vue-property-decorator";
 
-export default Vue.extend({
-  data() {
-    return {
-      columns: Array(15).fill([])
-    }
-  },
+const sum = (values: number[]) => values.reduce((a, b) => a + b, 0);
 
-  computed: {
-    total() {
-      return this.columns.map((values: number[]) => values.reduce((a, b) => a + b, 0));
-    }
-  },
-
+@Component({
   filters: {
     zero(value: number) {
       return value.toString(10).padStart(2, "0");
     }
   }
 })
+
+export default class Main extends Vue {
+  columns = Array(15).fill([])
+
+  get total() {
+    return this.columns.map(sum);
+  }
+};
 </script>
 
 <style>

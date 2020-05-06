@@ -7,6 +7,7 @@ devDependencies:
   '@vue/cli-plugin-babel': 4.3.1_@vue+cli-service@4.3.1
   '@vue/cli-plugin-typescript': 4.3.1_22122c1b335748d34772818bd2671b9d
   '@vue/cli-service': 4.3.1_1b4cef5c389d87a9858b46bd754dac7f
+  tslib: 1.11.2
   typescript: 3.8.3
   vue-template-compiler: 2.6.11
 lockfileVersion: 5.1
@@ -8377,6 +8378,7 @@ specifiers:
   '@vue/cli-plugin-typescript': ~4.3.0
   '@vue/cli-service': ~4.3.0
   core-js: ^3.6.4
+  tslib: ^1.11.2
   typescript: ~3.8.3
   vue: ^2.6.11
   vue-class-component: ^7.2.3
